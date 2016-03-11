@@ -1,9 +1,18 @@
 import '../scss/base.scss';
 
+
+
 import React from 'react';
 import HelloSayer from './HelloSayer';
 import HelloButton from './HelloButton';
-import Main from './Main';
+
+import rest from '../helloworld.json';
+
+console.log(rest);
+
+var test = {"a" : "b"};
+
+console.log(test["a"]);
 
 var HelloForm = React.createClass({
   getInitialState: function(){
@@ -13,7 +22,6 @@ var HelloForm = React.createClass({
   },
   render: function(){
     return(<div className="hello-form">
-      <Main/>
       <input type="text" onChange={this.onChange}/>
       <HelloSayer name={this.state.name}/>
       <HelloButton/>

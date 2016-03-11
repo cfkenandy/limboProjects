@@ -1,44 +1,4 @@
 {
-
-
-"PrimaryApp1" : "#FAFAFA",
-"PrimaryApp2" : "#0EABF4",
-"PrimaryApp3" : "#304954",
-
-"FeedBack1" : "#8CC63E",
-"FeedBack2" : "#FEBE29",
-"FeedBack3" : "#F4440E",
-
-"ChartColor11" : "#0EABF4",
-"ChartColor12" : "#75D1FB",
-"ChartColor13" : "#B9E8FD",
-"ChartColor14" : "#DAF4FF",
-
-"ChartColor21" : "#8CC73F",
-"ChartColor22" : "#B4E376",
-"ChartColor23" : "#CCE8A9",
-"ChartColor24" : "#E4F0D5",
-
-"ChartColor31" : "#FF9D08",
-"ChartColor32" : "#FEBE29",
-"ChartColor33" : "#FAD784",
-"ChartColor34" : "#FBECB1",
-
-"ChartColor41" : "#E2178E",
-"ChartColor42" : "#FB72C2",
-"ChartColor43" : "#F0B3D7",
-"ChartColor44" : "#E3D6DD",
-
-"White" : "#FFF",
-"ActiveTabColor" : "#999",
-"InactiveTabColor" : "#A1AEB3",
-"SectionTitleColor" : "#A1AEB3",
-"BodyColor" : "#545454",
-"BodyLinkColor" : "#0EABF4",
-"FieldLabelColor" : "#B7B7B7",
-"WidgetTitleColor" : "#545454",
-"ChartAxisColor" : "#798A91",
-
   "localNavHeight":"50px",
   "primaryColor": "red",
   "accentColor": "blue"

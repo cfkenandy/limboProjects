@@ -1,8 +1,28 @@
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 //var sassGlobals = require('./variables.json');
 //var sassVars = JSON.stringify(sassGlobals);
-var sassVars = 'variables.json';
+//var sassVars = 'variables.json';
 //var sassVars = require('./variables.json');
+
+
+
+var scssToJson = require('scss-to-json');
+var path = require('path');
+
+var filePath = path.resolve(__dirname, 'colors.scss');
+var colors = scssToJson(filePath);
+
+var obj = JSON.stringify(colors)
+
+console.log("---");
+console.log(colors['$PrimaryColor']);
+
+fs = require('fs');
+fs.writeFile('helloworld.json', obj, function (err) {
+  if (err) return console.log(err);
+  console.log('Hello World > helloworld.json');
+});
+
 
 
 function getEntrySources(sources){
@@ -27,24 +47,35 @@ module: {
   loaders: [
     {
         test: /\.json$/,
-        loader: 'json'
-    },    
+        loader: "json"
+    },
     {
       test: /\.jsx?$/,
       loaders: ['react-hot', 'jsx', 'babel'],
-      exclude: /node_modules/
+      exclude: [/node_modules/, /testfolder/]
     },
     {
       test: /\.scss$/,
-      //include: /scss/,
-      //loader: "style!css!sass!jsontosass?path="+ sassVars
-      loaders: ['style', 'css', 'sass', 'jsontosass?path='+sassVars]
+      include: /scss/,
+      loaders: ['style', 'css', 'sass']
     //  loaders: ['style', 'css', 'sass']
       //loader: ExtractTextPlugin.extract('css!sass')
 
     }
 
   ]
+}
+,
+resolve: {
+/*  root: [
+    path.resolve('src')
+
+  ],*/
+  modulesDirectories: ['node_modules'],
+  extensions: ['', '.js', '.jsx']
+},
+node: {
+    fs: "empty"
 }
 /*,
 plugins: [
