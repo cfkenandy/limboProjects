@@ -15,6 +15,7 @@ var HelloForm = React.createClass({
     return(<div className="hello-form">
       <Main/>
       <input type="text" onChange={this.onChange}/>
+      <p>My parent is, hello-form</p>
       <HelloSayer name={this.state.name}/>
       <HelloButton/>
       </div>);

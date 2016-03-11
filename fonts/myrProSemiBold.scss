@@ -1,0 +1,11 @@
+@font-face {
+  font-family: 'myrProSemiBold';
+  font-style: normal;
+  font-weight: normal;
+  src: url('./myriadpro-semibold-webfont.eot'),
+       url('./myriadpro-semibold-webfont.eot?#iefix') format('embedded-opentype'),
+      // url('./MyriadPro-Regular.woff2') format('woff2'),
+       url('./myriadpro-semibold-webfont.woff') format('woff'),
+       url('./myriadpro-semibold-webfont.ttf') format('truetype'),
+       url('./myriadpro-semibold-webfont.svg#Darkenstone') format('svg');
+}

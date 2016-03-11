@@ -1,0 +1,25 @@
+.header {
+    display: flex;
+    flex-flow: row nowrap;
+
+    &-brand {
+        order: 1;
+        flex-grow: 1;
+
+        > h1 {
+            //font: 6px;
+            font-family: myrProSemiBold;
+            color: red;
+        }
+
+        > p {
+            //font: 6px;
+            font-family: myrProRegular;
+            color: pink;
+        }
+    }
+
+    &-menu {
+        order: 2;
+    }
+}
