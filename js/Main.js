@@ -4,11 +4,23 @@ import RaisedButton from 'material-ui/lib/raised-button';
 import LeftNav from 'material-ui/lib/left-nav';
 import List from 'material-ui/lib/lists/list';
 import ListItem from 'material-ui/lib/lists/list-item';
+import FontIcon from 'material-ui/lib/font-icon';
+import Avatar from 'material-ui/lib/avatar';
+
+import SvgIconExampleSimple from '../customSVG/SvgIconExampleSimple'
+
 import {SelectableContainerEnhance} from 'material-ui/lib/hoc/selectable-enhance';
 
 import {cyan500} from 'material-ui/lib/styles/colors';
 import MuiThemeProvider from 'material-ui/lib/MuiThemeProvider';
 import getMuiTheme from 'material-ui/lib/styles/getMuiTheme';
+
+import ActionAndroid from 'material-ui/lib/svg-icons/action/android';
+
+
+import '../fonts/myrProRegular.scss';
+import '../fonts/myrProSemiBold.scss';
+import '../fonts/myrProLight.scss';
 
 import themeVars from '../variables.json';
 
@@ -23,6 +35,7 @@ console.log(cyan500);
 // and then update the keys for each component that depends on it.
 // More on Colors: http://www.material-ui.com/#/customization/colors
 const muiTheme = getMuiTheme({
+fontFamily: 'myrProRegular, sans-serif',
   palette: {
     primary1Color: themeVars.FeedBack1,
     primary2Color: cyan500,
@@ -128,11 +141,14 @@ onRequestChangeList(e,routepath) {
                 key={subKey}
                 primaryText={subName}
                 value = {subItem.value}
+                leftAvatar={
+                  <Avatar icon={<ActionAndroid />} />
+                }
             />)
         });
 },
     menuItems = sampleJSON.map(function(menuItem, key){
-          let name     = menuItem.name,
+          let name     = menuItem.name.toUpperCase(),
           subItems = menuItem.subItems || [];
           //if(EnableConsoleLog) console.log('name: ', name);
           return (<ListItem
@@ -140,16 +156,23 @@ onRequestChangeList(e,routepath) {
               primaryText={name}
               primaryTogglesNestedList={true}
               nestedItems={getSubItems(subItems)}
+              leftAvatar={
+                <Avatar icon={<ActionAndroid />} />
+              }
           />);
     });
     return(
       <div>
+
+
       <MuiThemeProvider muiTheme={muiTheme}>
       <RaisedButton
         label="Open LeftNav"
         onTouchTap={me.handleToggle.bind(me)}
       />
       </MuiThemeProvider>
+<SvgIconExampleSimple/>
+
   <MuiThemeProvider muiTheme={muiTheme}>
       <LeftNav
           ref="leftNav"

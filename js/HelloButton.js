@@ -8,6 +8,9 @@ import RaisedButton from 'material-ui/lib/raised-button';
 
 import themeVars from '../variables.json';
 
+import FontIcon from 'material-ui/lib/font-icon';
+import ActionAndroid from 'material-ui/lib/svg-icons/action/android';
+
 
 // This replaces the textColor value on the palette
 // and then update the keys for each component that depends on it.
@@ -27,7 +30,7 @@ class HelloButton extends React.Component{
 return (
   <div>
     <MuiThemeProvider muiTheme={muiTheme}>
-      <RaisedButton label="My Button" primary={true}/>
+      <RaisedButton label="My Button" primary={true}  icon={<ActionAndroid />}/>
     </MuiThemeProvider>
   </div>
 )

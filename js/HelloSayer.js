@@ -11,8 +11,8 @@ class HelloSayer extends React.Component{
     return <div className="header">
          <div className="header-brand">
              <h1>Hello {this.props.name}</h1>
-             <p class="b1">This old fox jumped over everyone</p>
-             <p class="b2">This old fox jumped over everyone</p>
+             <p className="b1">This old fox jumped over everyone</p>
+             <p className="b2">This old fox jumped over everyone</p>
 
          </div>
          <div className="header-menu">
