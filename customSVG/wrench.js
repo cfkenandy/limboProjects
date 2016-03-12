@@ -1,6 +1,6 @@
 import React from 'react';
-import {blue500, red500, greenA200} from 'material-ui/lib/styles/colors';
 import SvgIcon from 'material-ui/lib/svg-icon';
+import themeVars from '../variables.json';
 
 const iconStyles = {
 //  marginRight: 24,
@@ -13,9 +13,7 @@ const HomeIcon = (props) => (
 
 const arc = () => (
   <div>
-    <HomeIcon style={iconStyles} />
-    <HomeIcon style={iconStyles} color={blue500} />
-    <HomeIcon style={iconStyles} color={red500} hoverColor={greenA200} />
+    <HomeIcon style={iconStyles} color={themeVars.IconColor1} hoverColor={themeVars.IconColor2} />
   </div>
 );
 

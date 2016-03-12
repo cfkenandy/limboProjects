@@ -9,6 +9,12 @@ import Avatar from 'material-ui/lib/avatar';
 
 import SvgIconExampleSimple from '../customSVG/SvgIconExampleSimple';
 import Wrench from '../customSVG/wrench';
+import Cart from '../customSVG/Cart';
+import Monitor from '../customSVG/monitor';
+import Stack from '../customSVG/Stack';
+import Controls from '../customSVG/Controls';
+import Eye from '../customSVG/Eye';
+import Dots from '../customSVG/Dots';
 
 import {SelectableContainerEnhance} from 'material-ui/lib/hoc/selectable-enhance';
 
@@ -162,7 +168,7 @@ onRequestChangeList(e,routepath) {
               primaryTogglesNestedList={true}
               nestedItems={getSubItems(subItems)}
               leftAvatar={
-                <Avatar icon={<ActionAndroid />} />
+                <Avatar icon={<Wrench />} />
               }
           />);
     });
@@ -178,6 +184,12 @@ onRequestChangeList(e,routepath) {
       </MuiThemeProvider>
 <SvgIconExampleSimple/>
 <Wrench/>
+<Cart/>
+<Monitor/>
+<Stack/>
+<Controls/>
+<Eye/>
+<Dots/>
 
   <MuiThemeProvider muiTheme={muiTheme}>
       <LeftNav

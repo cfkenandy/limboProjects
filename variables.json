@@ -39,6 +39,10 @@
 "WidgetTitleColor" : "#545454",
 "ChartAxisColor" : "#798A91",
 
+"IconColor1": "#A0ACB0",
+"IconColor2": "#0EABF4",
+
+
   "localNavHeight":"50px",
   "primaryColor": "red",
   "accentColor": "blue"
