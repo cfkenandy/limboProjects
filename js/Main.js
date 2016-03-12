@@ -7,7 +7,8 @@ import ListItem from 'material-ui/lib/lists/list-item';
 import FontIcon from 'material-ui/lib/font-icon';
 import Avatar from 'material-ui/lib/avatar';
 
-import SvgIconExampleSimple from '../customSVG/SvgIconExampleSimple'
+import SvgIconExampleSimple from '../customSVG/SvgIconExampleSimple';
+import Wrench from '../customSVG/wrench';
 
 import {SelectableContainerEnhance} from 'material-ui/lib/hoc/selectable-enhance';
 
@@ -31,6 +32,10 @@ const SelectableList = SelectableContainerEnhance(List);
 
 console.log(themeVars.FeedBack1);
 console.log(cyan500);
+
+// TODO: Figure out this: https://github.com/callemall/material-ui/issues/957
+// TODO: http://www.kalose.net/tutorials/create-spinning-gif-image-adobe-photoshop/
+
 // This replaces the textColor value on the palette
 // and then update the keys for each component that depends on it.
 // More on Colors: http://www.material-ui.com/#/customization/colors
@@ -172,6 +177,7 @@ onRequestChangeList(e,routepath) {
       />
       </MuiThemeProvider>
 <SvgIconExampleSimple/>
+<Wrench/>
 
   <MuiThemeProvider muiTheme={muiTheme}>
       <LeftNav
