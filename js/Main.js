@@ -161,14 +161,21 @@ onRequestChangeList(e,routepath) {
     menuItems = sampleJSON.map(function(menuItem, key){
           let name     = menuItem.name.toUpperCase(),
           subItems = menuItem.subItems || [];
+
+          let getIcon = (n) => {
+            console.log(n);
+            return <Monitor/>;
+
+          };
           //if(EnableConsoleLog) console.log('name: ', name);
+            // <Avatar icon={<Wrench />} />
           return (<ListItem
               key={key}
               primaryText={name}
               primaryTogglesNestedList={true}
               nestedItems={getSubItems(subItems)}
               leftAvatar={
-                <Avatar icon={<Wrench />} />
+                <Avatar icon={getIcon({name})} />
               }
           />);
     });
