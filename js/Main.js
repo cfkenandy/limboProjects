@@ -162,9 +162,47 @@ onRequestChangeList(e,routepath) {
           let name     = menuItem.name.toUpperCase(),
           subItems = menuItem.subItems || [];
 
+          /*
+          import SvgIconExampleSimple from '../customSVG/SvgIconExampleSimple';
+          import Wrench from '../customSVG/wrench';
+          import Cart from '../customSVG/Cart';
+          import Monitor from '../customSVG/monitor';
+          import Stack from '../customSVG/Stack';
+          import Controls from '../customSVG/Controls';
+          import Eye from '../customSVG/Eye';
+          import Dots from '../customSVG/Dots';
+          */
+
           let getIcon = (n) => {
             console.log(n);
-            return <Monitor/>;
+            if(n.name){
+              switch(n.name){
+                case "RECENT ITEMS":
+                  return <Controls/>;
+                break;
+                case "DASHBOARD":
+                  return <Monitor/>;
+                break;
+                case "ANIMALS":
+                  return <Stack/>;
+                break;
+                case "MORDANT":
+                  return <Eye/>;
+                break;
+                case "ALL PAGES":
+                  return <Dots/>;
+                break;
+                default:
+                  console.log("Default");
+                  return <Cart/>;
+              }
+            }
+            else{
+              console.log("DATA IS : Invalid");
+              return null;
+            }
+
+
 
           };
           //if(EnableConsoleLog) console.log('name: ', name);
