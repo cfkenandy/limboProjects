@@ -3,7 +3,11 @@ import SvgIcon from 'material-ui/lib/svg-icon';
 import themeVars from '../variables.json';
 
 const iconStyles = {
-//  marginRight: 24,
+  height: 40,
+  width: 40,
+  marginLeft: 5,
+  marginTop: 5
+
 };
 // <path d="M10,0c5.5,0,10,4.5,10,10s-4.5,10-10,10S0,15.5,0,10S4.5,0,10,0z"/>
 const HomeIcon = (props) => (

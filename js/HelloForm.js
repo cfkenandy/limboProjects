@@ -4,6 +4,7 @@ import React from 'react';
 import HelloSayer from './HelloSayer';
 import HelloButton from './HelloButton';
 import Main from './Main';
+import Cart from '../customSVG/Cart';
 
 var HelloForm = React.createClass({
   getInitialState: function(){
@@ -17,6 +18,7 @@ var HelloForm = React.createClass({
       <input type="text" onChange={this.onChange}/>
       <p>My parent is, hello-form</p>
       <HelloSayer name={this.state.name}/>
+      <Cart/>
       <HelloButton/>
       </div>);
   },

@@ -3,7 +3,10 @@ import SvgIcon from 'material-ui/lib/svg-icon';
 import themeVars from '../variables.json';
 
 const iconStyles = {
-  width: 20
+  height: 40,
+  width: 40,
+  marginLeft: 5,
+  marginTop: 5
 
 //  marginRight: 24,
 };

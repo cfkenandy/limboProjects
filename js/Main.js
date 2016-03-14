@@ -23,6 +23,7 @@ import MuiThemeProvider from 'material-ui/lib/MuiThemeProvider';
 import getMuiTheme from 'material-ui/lib/styles/getMuiTheme';
 
 import ActionAndroid from 'material-ui/lib/svg-icons/action/android';
+import ShoppingCart from 'material-ui/lib/svg-icons/action/shopping-cart';
 
 
 import '../fonts/myrProRegular.scss';
@@ -139,6 +140,11 @@ onRequestChangeList(e,routepath) {
   this.setState({open: !this.state.open});
 }
 
+/*
+leftAvatar={
+  <Avatar icon={<ShoppingCart />} />
+}
+*/
   render(){
     let me = this,
     getSubItems = (subItems) => {
@@ -152,9 +158,8 @@ onRequestChangeList(e,routepath) {
                 key={subKey}
                 primaryText={subName}
                 value = {subItem.value}
-                leftAvatar={
-                  <Avatar icon={<ActionAndroid />} />
-                }
+                leftIcon={<Cart />}
+
             />)
         });
 },
