@@ -158,9 +158,11 @@ leftAvatar={
                 key={subKey}
                 primaryText={subName}
                 value = {subItem.value}
-                leftIcon={<Cart />}
+                style = {{paddingLeft: 20}}
+
 
             />)
+            // leftIcon={<Cart />}
         });
 },
     menuItems = sampleJSON.map(function(menuItem, key){
@@ -217,10 +219,14 @@ leftAvatar={
               primaryText={name}
               primaryTogglesNestedList={true}
               nestedItems={getSubItems(subItems)}
-              leftAvatar={
-                <Avatar icon={getIcon({name})} />
-              }
+               leftIcon={getIcon({name})}
+
+
           />);
+
+          // leftAvatar={
+          //   <Avatar icon={getIcon({name})} />
+          // }
     });
     return(
       <div>
@@ -232,6 +238,7 @@ leftAvatar={
         onTouchTap={me.handleToggle.bind(me)}
       />
       </MuiThemeProvider>
+<ActionAndroid />
 <SvgIconExampleSimple/>
 <Wrench/>
 <Cart/>

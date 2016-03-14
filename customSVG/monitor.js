@@ -3,10 +3,13 @@ import SvgIcon from 'material-ui/lib/svg-icon';
 import themeVars from '../variables.json';
 
 const iconStyles = {
-  height: 40,
-  width: 40,
-  marginLeft: 5,
-  marginTop: 5
+  display: "inline-block",
+  height: 30,
+  width: 30,
+  left: 20,
+  margin: 12,
+  position: "absolute",
+  top: 0
 
 //  marginRight: 24,
 };
@@ -18,7 +21,7 @@ const HomeIcon = (props) => (
 
 const Cart = () => (
   <div>
-    <HomeIcon style={iconStyles} color={themeVars.IconColor1} hoverColor={themeVars.IconColor2} />
+    <HomeIcon style={iconStyles} color={themeVars.PrimaryApp1} hoverColor={themeVars.IconColor2} />
   </div>
 );
 

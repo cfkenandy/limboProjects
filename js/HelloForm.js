@@ -18,7 +18,6 @@ var HelloForm = React.createClass({
       <input type="text" onChange={this.onChange}/>
       <p>My parent is, hello-form</p>
       <HelloSayer name={this.state.name}/>
-      <Cart/>
       <HelloButton/>
       </div>);
   },
