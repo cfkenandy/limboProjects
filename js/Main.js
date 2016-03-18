@@ -3,7 +3,8 @@ import AppBar from 'material-ui/lib/app-bar';
 import RaisedButton from 'material-ui/lib/raised-button';
 import LeftNav from 'material-ui/lib/left-nav';
 import List from 'material-ui/lib/lists/list';
-import ListItem from 'material-ui/lib/lists/list-item';
+//import ListItem from 'material-ui/lib/lists/list-item';
+import ListItem from '../customComps/itemlist';
 import FontIcon from 'material-ui/lib/font-icon';
 import Avatar from 'material-ui/lib/avatar';
 
@@ -30,7 +31,18 @@ import '../fonts/myrProRegular.scss';
 import '../fonts/myrProSemiBold.scss';
 import '../fonts/myrProLight.scss';
 
+//import '../fonts/style.scss';
+
 import themeVars from '../variables.json';
+
+
+// Tab stuff
+import Tabs from 'material-ui/lib/tabs/tabs';
+import Tab from 'material-ui/lib/tabs/tab';
+import Slider from 'material-ui/lib/slider';
+
+//import tbz from './Tabs'
+
 
 import injectTapEventPlugin from "react-tap-event-plugin";
 injectTapEventPlugin();
@@ -76,6 +88,26 @@ fontFamily: 'myrProRegular, sans-serif',
     backgroundColor: themeVars.PrimaryApp3
   }
 });
+
+
+const styles = {
+  headline: {
+    fontSize: 24,
+    paddingTop: 16,
+    marginBottom: 12,
+    fontWeight: 400,
+    backgroundColor: themeVars.PrimaryApp3
+    },
+
+  header: {
+    backgroundColor: themeVars.PrimaryApp3,
+    color: themeVars.PrimaryApp3
+  }
+};
+
+function handleActive(tab) {
+  alert(`A tab with this route property ${tab.props.route} was activated.`);
+}
 
 const sampleJSON = [
   {
@@ -159,6 +191,9 @@ leftAvatar={
                 primaryText={subName}
                 value = {subItem.value}
                 style = {{paddingLeft: 20}}
+                textColor={'#FAFAFA'}
+                textHoverColor={'#0EABF4'}                
+
 
 
             />)
@@ -168,7 +203,6 @@ leftAvatar={
     menuItems = sampleJSON.map(function(menuItem, key){
           let name     = menuItem.name.toUpperCase(),
           subItems = menuItem.subItems || [];
-
           /*
           import SvgIconExampleSimple from '../customSVG/SvgIconExampleSimple';
           import Wrench from '../customSVG/wrench';
@@ -219,8 +253,9 @@ leftAvatar={
               primaryText={name}
               primaryTogglesNestedList={true}
               nestedItems={getSubItems(subItems)}
-               leftIcon={getIcon({name})}
-
+              leftIcon={getIcon({name})}
+              textColor={'#FAFAFA'}
+              textHoverColor={'#0EABF4'}
 
           />);
 
@@ -253,6 +288,7 @@ leftAvatar={
           ref="leftNav"
           docked={false}
           open={me.state.open}
+
       >
       <SelectableList
           valueLink={{value: "test", requestChange: me.onRequestChangeList.bind(me)}}
@@ -261,6 +297,43 @@ leftAvatar={
       </SelectableList>
       </LeftNav>
         </MuiThemeProvider>
+
+        <Tabs>
+          <Tab label="Item One" >
+            <div>
+              <h2 style={styles.headline}>Tab One</h2>
+              <p>
+                This is an example tab.
+              </p>
+              <p>
+                You can put any sort of HTML or react component in here. It even keeps the component state!
+              </p>
+              <Slider name="slider0" defaultValue={0.5} />
+            </div>
+          </Tab>
+          <Tab label="Item Two" >
+            <div>
+              <h2 style={styles.headline}>Tab Two</h2>
+              <p>
+                This is another example tab.
+              </p>
+            </div>
+          </Tab>
+          <Tab
+            label="onActive"
+            route="/home"
+            onActive={handleActive}
+          >
+            <div>
+              <h2 style={styles.headline}>Tab Three</h2>
+              <p>
+                This is a third example tab.
+              </p>
+            </div>
+          </Tab>
+        </Tabs>
+
+
       </div>
     );
   }

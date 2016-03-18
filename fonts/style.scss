@@ -1,0 +1,20 @@
+div.uc{
+  div{
+    span{
+      div:hover{
+          color: red;
+          div{
+            div{
+              svg{
+                fill: red;
+              }
+            }
+          }
+      }
+    }
+  }
+}
+
+.uc{
+  border: 1px solid red;
+}

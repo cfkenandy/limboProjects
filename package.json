@@ -38,6 +38,7 @@
     "json-loader": "^0.5.4",
     "material-ui": "^0.15.0-alpha.1",
     "react": "^0.14.7",
+    "react-addons-pure-render-mixin": "^0.14.7",
     "react-addons-test-utils": "^0.14.7",
     "react-data-grid": "^0.14.15",
     "react-dom": "^0.14.7",
@@ -47,7 +48,8 @@
     "react-tap-event-plugin": "^0.2.2",
     "recompose": "^0.15.0",
     "redux": "^3.3.1",
-    "redux-thunk": "^1.0.3"
+    "redux-thunk": "^1.0.3",
+    "simple-assign": "^0.1.0"
   },
   "babel": {
     "presets": [
